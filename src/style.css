@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "oleo";
+  src: url("./fonts/oleoscriptswashcaps-regular-webfont.woff2") format("woff2"),
+    url("./fonts/oleoscriptswashcaps-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "macondo";
+  src: url("./fonts/macondo-regular-webfont.woff2") format("woff2"),
+    url("./fonts/macondo-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
 }
@@ -6,29 +22,145 @@
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-image: url("../src/images/cafe.jpg");
-  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 6fr 1fr;
-}
-
-.main {
-  grid-area: 3/1/4/2;
-  color: white;
-  background-color: black;
-  opacity: 0.5;
+  grid-template-columns: 1fr 3.5fr 1fr;
+  grid-template-rows: 1fr 0.5fr 6fr 0.5fr;
 }
 
 .header {
-  grid-area: 1/1/2/2;
+  font-family: "oleo", "Courier New", Courier, monospace;
+  font-size: 60px;
+  color: #fffaf0;
+  display: flex;
+  grid-area: 1/1/2/4;
   color: white;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  grid-area: 2/1/3/4;
+  background-color: black;
+  display: inline-flex;
+  justify-content: center;
+  gap: 3%;
+  padding: 8px 0;
+}
+button {
+  font-family: "oleo", "Courier New", Courier, monospace;
+
+  width: 10%;
+  border-radius: 12px;
+  background-color: #3c2218;
+  color: #fffaf0;
+  font-size: larger;
+}
+button:hover {
+  background-color: #522f21;
+  cursor: pointer;
+}
+
+.blank {
+  grid-area: 3/1/4/2;
+  background-color: black;
+}
+
+.main {
+  grid-area: 3/2/4/3;
+  color: white;
+  background-color: black;
+  background-image: url("../src/images/cafe.jpg");
+  background-size: 100% 100%;
+}
+
+.blank2 {
+  grid-area: 3/3/4/4;
   background-color: black;
 }
 
 .footer {
-  grid-area: 4/1/5/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: 4/1/5/4;
   background-color: black;
   color: white;
+  font-size: x-small;
+}
+
+.home {
+  font-family: "macondo", "Courier New", Courier, monospace;
+  background-color: black;
+  opacity: 0.7;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  width: 75%;
+  height: 75%;
+  border-radius: 500px;
+  padding: 40px;
+}
+
+.main-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-content {
+  text-align: center;
+}
+
+.main-menu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 7fr;
+}
+
+.buttonDiv {
+  display: flex;
+}
+
+.buttonDiv > button {
+  width: 100%;
+  font-size: xx-large;
+  margin: 8px;
+}
+
+.main-contact {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+}
+.about-us {
+  font-family: "macondo", "Courier New", Courier, monospace;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.marshall {
+  grid-area: 1/1/2/2;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.marshall2 {
+  grid-area: 2/1/3/2;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
