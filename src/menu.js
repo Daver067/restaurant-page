@@ -154,7 +154,7 @@ const americano = new food(
 );
 const water = new food(
   "Water",
-  "Espresso with no foamy milk just water also no espresso. Making sure this updates",
+  "Espresso with no foamy milk just water also no espresso.",
   `${waterImg}`,
   "$ 4.99"
 );
