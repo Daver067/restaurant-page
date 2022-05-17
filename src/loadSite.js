@@ -1,5 +1,14 @@
+//this is because of webpack erasing my index.html when I added a plugin...
+//not sure how to have anything in my index.html with webpack plugin
+const makeContainer = document.createElement("div");
+makeContainer.id = "content";
+const html = document.querySelector("html");
+html.appendChild(makeContainer);
+
+//this is where it began before webpack plugin
 const container = document.getElementById("content");
 
+//this creates the site layout
 function createSite() {
   createElement("h1", "header", "Marshall's Cafe");
   createElement("div", "main", "");
@@ -14,6 +23,7 @@ function createSite() {
   buildNavBar();
 }
 
+//I could probably save this function somewhere, as I use it in all my js files. But I didnt
 function createElement(type, addClass, innerHTML) {
   const domElement = document.createElement(type);
   domElement.classList.add(addClass);
@@ -21,6 +31,7 @@ function createElement(type, addClass, innerHTML) {
   container.appendChild(domElement);
 }
 
+//Builds Nav bar
 function buildNavBar() {
   const nav = document.querySelector(".nav");
   nav.appendChild(buttonBuilder("Home", "active"));
@@ -28,6 +39,7 @@ function buildNavBar() {
   nav.appendChild(buttonBuilder("Contact-Us", "hidden"));
 }
 
+//a function to build buttons
 function buttonBuilder(innerHtml, addClass) {
   const btn = document.createElement("button");
   btn.innerHTML = innerHtml;

@@ -1,11 +1,15 @@
+import marshall1 from "../src/images/marshall.jpg";
+import marshall22 from "../src/images/marshall2.jpg";
+
+//Render the contact page
 function renderContact() {
   const main = document.querySelector(".main");
   main.classList.add("main-contact");
   let marshall = createElement("div", "marshall", "");
-  marshall.style.backgroundImage = "url('../src/images/marshall.jpg')";
+  marshall.style.backgroundImage = `url(${marshall1})`;
   main.appendChild(marshall);
   let marshall2 = createElement("div", "marshall2", "");
-  marshall2.style.backgroundImage = "url('../src/images/marshall2.jpg')";
+  marshall2.style.backgroundImage = `url(${marshall22})`;
   main.appendChild(marshall2);
   main.appendChild(
     createElement(
@@ -23,18 +27,12 @@ function renderContact() {
   );
 }
 
+//same create element function
 function createElement(type, addClass, innerHTML) {
   const domElement = document.createElement(type);
   domElement.classList.add(addClass);
   domElement.innerHTML = innerHTML;
   return domElement;
-}
-
-function createImg() {
-  const image = new Image();
-  image.src = "../src/images/marshall.jpg";
-  image.classList.add("marshall");
-  return image;
 }
 
 export default renderContact;

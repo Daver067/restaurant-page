@@ -1,3 +1,4 @@
+//Rendering the home page
 function renderHome() {
   const main = document.querySelector(".main");
   main.classList.add("main-home");
@@ -20,6 +21,7 @@ function renderHome() {
   main.appendChild(div);
 }
 
+//same function i used everywhere
 function createElement(type, addClass, innerHTML) {
   const domElement = document.createElement(type);
   domElement.classList.add(addClass);

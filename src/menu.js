@@ -1,3 +1,13 @@
+import croissantImg from "../src/images/croissant.jpg";
+import bananaImg from "../src/images/banana.jpg";
+import danishImg from "../src/images/danish.jpg";
+import meatPieImg from "../src/images/meatPie.jpg";
+import chickenWingsImg from "../src/images/chickenWings.jpg";
+import latteImg from "../src/images/latte.jpg";
+import cappucinoImg from "../src/images/cappucino.jpg";
+import americanoImg from "../src/images/americano.jpg";
+import waterImg from "../src/images/water.jpg";
+
 //class constructor for a new food item
 class food {
   constructor(name, content, image, price) {
@@ -74,34 +84,34 @@ function drinksListener() {
 const croissant = new food(
   "Croissant",
   "This is probably the best croissant you can buy for 18 cents.",
-  "../src/images/croissant.jpg",
+  `${croissantImg}`,
   "$ 0.18"
 );
 
 const banana = new food(
   "Banana",
   "Yeah, we are selling just a plain banana. If you dont want it then dont buy it!",
-  "../src/images/banana.jpg",
+  `${bananaImg}`,
   "$ 19.99"
 );
 
 const danish = new food(
   "Danish",
   "This is a tasty snack. Puffed pastry with some red goop inside. 10/10 would reccomend.",
-  "../src/images/danish.jpg",
+  `${danishImg}`,
   "$ 1.99"
 );
 const meatPie = new food(
   "Meat Pie",
   "It's kind of like a meat-loaf, and also kind of like a pot-pie. It's ok at best.",
-  "../src/images/meatPie.jpg",
+  `${meatPieImg}`,
   "free"
 );
 
 const chickenWings = new food(
   "Chicken Wings",
   "Ever been to a cafe with chicken wings? Well now you have! We just got an air fryer and are willing to fry anything!",
-  "../src/images/chickenWings.jpg",
+  `${chickenWingsImg}`,
   "$ 10.00 per lb"
 );
 
@@ -127,25 +137,25 @@ function removeMenu() {
 const latte = new food(
   "Latte",
   "Espresso with foamy milk.",
-  "../src/images/latte.jpg",
+  `${latteImg}`,
   "$ 4.99"
 );
 const cappucino = new food(
   "Cappucino",
   "Espresso with foamy milk. Somehow slightly different than latte",
-  "../src/images/cappucino.jpg",
+  `${cappucinoImg}`,
   "$ 4.99"
 );
 const americano = new food(
   "Americano",
   "Espresso with no foamy milk just water. But it's hot. Bring your own sugar and cream please.",
-  "../src/images/americano.jpg",
+  `${americanoImg}`,
   "$ 4.99"
 );
 const water = new food(
   "Water",
   "Espresso with no foamy milk just water also no espresso.",
-  "../src/images/water.jpg",
+  `${waterImg}`,
   "$ 4.99"
 );
 const allDrinks = [latte, cappucino, americano, water];

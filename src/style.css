@@ -166,6 +166,7 @@ button:hover {
 }
 
 .menu-display {
+  font-family: "macondo", "Courier New", Courier, monospace;
   display: flex;
   flex-direction: column;
   gap: 3px;
